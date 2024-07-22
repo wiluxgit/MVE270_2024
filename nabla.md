@@ -47,3 +47,6 @@ Skalärprodukten med en ortagonal vektor är alltid noll
 $= \hat{\bf N} \cdot {\bf F}_\parallel dS$
 
 $dS$ ytan är ortagonal till $\hat{\bf N}$ och ${\bf F}_\parallel$
+
+DIVERGENS THEOREM:
+```https://www.youtube.com/watch?v=DrRsXhln4S```
