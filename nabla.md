@@ -29,3 +29,21 @@ $\bf{F} = \nabla\phi \quad$ i $D$
 
 https://math.stackexchange.com/questions/4710934/why-does-vec-nabla-times-vec-f-0-mean-that-exists-phi-nabla-phi-ve
 https://math.stackexchange.com/questions/638099/why-curl-free-field-implies-existence-of-potential-function
+
+
+
+### **Bonus) Insikt i $\hat{\bf N} \cdot {\bf F}dS$**
+
+$\hat{\bf N}$ är en vektor som är **utåtriktad** från volymens yta där riktningen är ortagonal med ytan.
+
+![alt text](images/gausscube1.png)
+
+Dela upp $F$ till det som är parallellt/ortagonalt med $\hat{\bf N}$
+![alt text](images/gausscube2.png)
+$\large \hat{\bf N} \cdot {\bf F}dS = \hat{\bf N} \cdot ({\bf F}_\parallel + {\bf F}_\perp) dS$
+$= (\hat{\bf N} \cdot {\bf F}_\parallel + \hat{\bf N} \cdot {\bf F}_\perp) dS$
+
+Skalärprodukten med en ortagonal vektor är alltid noll
+$= \hat{\bf N} \cdot {\bf F}_\parallel dS$
+
+$dS$ ytan är ortagonal till $\hat{\bf N}$ och ${\bf F}_\parallel$
