@@ -50,3 +50,62 @@ $dS$ ytan är ortagonal till $\hat{\bf N}$ och ${\bf F}_\parallel$
 
 DIVERGENS THEOREM:
 ```https://www.youtube.com/watch?v=DrRsXhln4S```
+
+
+
+
+
+
+### EXXA
+
+
+> Bonus: Verifiera att matrismultiplikationen blev rätt
+> Subsitutation $F_K^{-1} = Q$
+>> $\left(
+   (\nabla Q)^\top
+   \cdot
+   \nabla_{\hat{x}}\hat{\varphi}
+   \left(
+      Q(x)
+   \right)
+\right)_i$
+>
+>$\nabla Q = \Large\def\arraystretch{1.5}\begin{bmatrix}
+   \frac{\partial Q_1}{\partial x_1} & \frac{\partial Q_1}{\partial x_2} & \cdots & \frac{\partial Q_1}{\partial x_n}
+   \\
+   \frac{\partial Q_2}{\partial x_1} & \frac{\partial Q_2}{\partial x_2} & \cdots & \frac{\partial Q_2}{\partial x_n}
+   \\
+   \vdots & \vdots & \ddots & \vdots
+   \\
+   \frac{\partial Q_n}{\partial x_1} & \frac{\partial Q_n}{\partial x_2} & \cdots & \frac{\partial Q_n}{\partial x_n}
+\end{bmatrix}$
+>
+>$\nabla_{\hat{x}}\hat{\varphi} = \Large\def\arraystretch{1.5}\begin{bmatrix}
+   \frac{\partial \varphi_1}{\partial {\hat{x}}_1} & \frac{\partial \varphi_1}{\partial {\hat{x}}_2} & \cdots & \frac{\partial \varphi_1}{\partial {\hat{x}}_n}
+   \\
+   \frac{\partial \varphi_2}{\partial {\hat{x}}_1} & \frac{\partial \varphi_2}{\partial {\hat{x}}_2} & \cdots & \frac{\partial \varphi_2}{\partial {\hat{x}}_n}
+   \\
+   \vdots & \vdots & \ddots & \vdots
+   \\
+   \frac{\partial \varphi_n}{\partial {\hat{x}}_1} & \frac{\partial \varphi_n}{\partial {\hat{x}}_2} & \cdots & \frac{\partial \varphi_n}{\partial {\hat{x}}_n}
+\end{bmatrix}$
+>
+>$(\nabla Q)^\top = \Large\def\arraystretch{1.5}\begin{bmatrix}
+   \frac{\partial Q_1}{\partial x_1} & \frac{\partial Q_2}{\partial x_1} & \cdots & \frac{\partial Q_n}{\partial x_1}
+   \\
+   \frac{\partial Q_1}{\partial x_2} & \frac{\partial Q_2}{\partial x_2} & \cdots & \frac{\partial Q_n}{\partial x_2}
+   \\
+   \vdots & \vdots & \ddots & \vdots
+   \\
+   \frac{\partial Q_1}{\partial x_n} & \frac{\partial Q_2}{\partial x_n} & \cdots & \frac{\partial Q_n}{\partial x_n}
+\end{bmatrix}$
+>
+>ex: rad $i = 1$ blir:
+
+$\begin{bmatrix}
+   \displaystyle\sum_{i=1}^n \frac{\partial \varphi_i}{\partial \hat{x}_1} \cdot \frac{\partial Q_i}{\partial x_1} &
+   \displaystyle\sum_{i=1}^n \frac{\partial \varphi_i}{\partial \hat{x}_2} \cdot \frac{\partial Q_i}{\partial x_1} &
+   \cdots &
+   \displaystyle\sum_{i=1}^n \frac{\partial \varphi_i}{\partial \hat{x}_n} \cdot \frac{\partial Q_i}{\partial x_1}
+\end{bmatrix}$
+
