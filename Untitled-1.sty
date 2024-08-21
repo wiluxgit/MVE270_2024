@@ -1,0 +1,115 @@
+
+För V-trianglar får vi:
+
+$\phi_1(x_1,y_1)=1$, $\phi_1(x_1+h,y_1+h)=0$, $\phi_1(x_1,y_1+h)=0$<br>
+$\phi_2(x_1,y_1)=0$, $\phi_2(x_1+h,y_1+h)=1$, $\phi_2(x_1,y_1+h)=0$<br>
+$\phi_3(x_1,y_1)=0$, $\phi_3(x_1+h,y_1+h)=0$, $\phi_3(x_1,y_1+h)=1$<br>
+
+
+
+Detta ekvation i en matris blir
+
+$$
+\begin{bmatrix}
+a_1 & b_1 & c_1 \\
+a_2 & b_2 & c_2 \\
+a_3 & b_3 & c_3 \\
+\end{bmatrix}
+\begin{bmatrix}
+  1 &   1 &   1   \\
+x_1 & x_2 & x_3 \\
+y_1 & y_2 & y_3 \\
+\end{bmatrix}
+=
+\begin{bmatrix}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 1\\
+\end{bmatrix}
+$$
+
+
+$$
+\begin{bmatrix}
+a_1 & b_1 & c_1 \\
+a_2 & b_2 & c_2 \\
+a_3 & b_3 & c_3 \\
+\end{bmatrix}
+=
+\begin{bmatrix}
+  1 &   1 &   1   \\
+x_1 & x_2 & x_3 \\
+y_1 & y_2 & y_3 \\
+\end{bmatrix}^{-1}
+$$
+
+$$
+\begin{bmatrix}
+\phi_1(x,y) \\
+\phi_2(x,y) \\
+\phi_3(x,y) \\
+\end{bmatrix} =
+\begin{bmatrix}
+  1 &   1 &   1   \\
+x_1 & x_2 & x_3 \\
+y_1 & y_2 & y_3 \\
+\end{bmatrix}^{-1}
+\begin{bmatrix}
+1\\
+x\\
+y\\
+\end{bmatrix}
+$$
+
+Denna är lösbar med det är inte jätteviktigt vad värderna är just nu
+
+
+
+# 3.3) Räkna ut $a_{ij}$
+
+Låt os betrakta en triangel och
+
+$\displaystyle\iint_T \alpha \nabla\phi_i \cdot \nabla\phi_j dA$
+
+> RE
+$\begin{bmatrix}
+\phi_1(x,y) \\
+\phi_2(x,y) \\
+\phi_3(x,y) \\
+\end{bmatrix} = A \begin{bmatrix}
+1\\x\\y\\
+\end{bmatrix}
+$
+
+H-trianglar
+
+$\nabla\phi_1 \cdot \nabla\phi_2 = \begin{bmatrix}b_1 \\ c_1\end{bmatrix} \cdot \begin{bmatrix}b_2 \\ c_2\end{bmatrix} = \frac{1}{h^2}(-1\cdot 1 + 0\cdot -1) = \frac{-1}{h^2}$
+
+$\nabla\phi_1 \cdot \nabla\phi_3 = \begin{bmatrix}b_1 \\ c_1\end{bmatrix} \cdot \begin{bmatrix}b_3 \\ c_3\end{bmatrix} = \frac{1}{h^2}(-1\cdot 0 + 0\cdot 1) = \frac{0}{h^2}$
+
+$\nabla\phi_2 \cdot \nabla\phi_3 = \begin{bmatrix}b_2 \\ c_2\end{bmatrix} \cdot \begin{bmatrix}b_3 \\ c_3\end{bmatrix} = \frac{1}{h^2}(1 \cdot 0 + -1\cdot 1) = \frac{-1}{h^2}$
+<br>
+
+V-trianglar
+
+$\nabla\phi_1 \cdot \nabla\phi_2 = \begin{bmatrix}b_1 \\ c_1\end{bmatrix} \cdot \begin{bmatrix}b_2 \\ c_2\end{bmatrix} = \frac{1}{h^2}(0\cdot -1 + -1\cdot 1) = \frac{-1}{h^2}$
+
+$\nabla\phi_1 \cdot \nabla\phi_3 = \begin{bmatrix}b_1 \\ c_1\end{bmatrix} \cdot \begin{bmatrix}b_3 \\ c_3\end{bmatrix} = \frac{1}{h^2}(0\cdot 1 + -1\cdot 0) = \frac{0}{h^2}$
+
+$\nabla\phi_2 \cdot \nabla\phi_3 = \begin{bmatrix}b_2 \\ c_2\end{bmatrix} \cdot \begin{bmatrix}b_3 \\ c_3\end{bmatrix} = \frac{1}{h^2}(-1 \cdot 1 + 1\cdot 0) = \frac{-1}{h^2}$
+
+Altså:
+$\displaystyle\iint_T \alpha \nabla\phi_1 \cdot \nabla\phi_2 dA = -\frac{\alpha}{h^2} \displaystyle\iint_T dA$
+
+Integral över ytan oberoende av funktion = arean av ytan = ytan av triangel = $h^2/2$
+
+Sammanfattningsvis får vi följande för både V och H trianglar.
+
+$\displaystyle\iint_T \alpha \nabla\phi_1 \cdot \nabla\phi_2 dA = -\frac{\alpha}{2}$
+
+$\displaystyle\iint_T \alpha \nabla\phi_1 \cdot \nabla\phi_3 dA = 0$
+
+$\displaystyle\iint_T \alpha \nabla\phi_2 \cdot \nabla\phi_3 dA = -\frac{\alpha}{2}$
+
+Detta känns väldigt fel och superspecifikt för just
+**FORMEL JAG INTE HAR TILLGÅNG TILL**
